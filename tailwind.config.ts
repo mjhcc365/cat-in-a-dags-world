@@ -13,7 +13,8 @@ export default {
     colors: {
       black: "#070612",
       white: "#FFFFFF",
-      red: "#FE0000",
+      // red: "#FE0000",
+      red: "#fff",
       "pink-light": "#F5B8D4", // 推测值
       current: "currentColor",
     }, // 自定义字体

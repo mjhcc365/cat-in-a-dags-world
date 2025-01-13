@@ -69,6 +69,34 @@ html {
   margin-bottom: 4rem;
 }
 
+.btn::after{
+  background-color: rgba(0, 0, 0, .15);
+  bottom: -.7rem;
+  content: "";
+  height: 100%;
+  position: absolute;
+  right: -.7rem;
+  width: 100%;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+@media (hover: hover) and (pointer:fine) {
+  .btn__content {
+      transition:transform .65s cubic-bezier(.19,1,.22,1);
+  }
+  .btn:hover .btn__content {
+      transform: translate(.7rem,.7rem)
+  }
+}
+
+.btn__content{
+  border-radius: inherit;
+}
+.btn__content::before{
+  /* background-color: green; */
+}
+
 .title-m{
   font-size:2.5rem;
   line-height: .95;

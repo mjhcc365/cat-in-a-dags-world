@@ -1,13 +1,12 @@
 import Image from "next/image";
 import spray from "./source/spray.png";
 
-import "./header.css";
-
 // 动态的来源 各种各样的动画
+// canvas
 
 const Header = () => {
   return (
-    <div className="bg-red w-full relative site-max border">
+    <div className="bg-red w-full relative site-max ">
       {/* header */}
       {/* 1. fixed logo  */}
       <div className="h-75 s:h-110 font-main title-m pl-75 s:pl-110">
@@ -23,21 +22,21 @@ const Header = () => {
           alt={"logo"}
         />
         <div className="flex items-center">
-          <div className="btn inline-flex items-start rounded-[1.5rem] relative h-spray-t h-75 cursor-pointer z-2 origin-bottom">
+          {/* <div className="btn inline-flex items-start rounded-[1.5rem] relative h-spray-t h-75 cursor-pointer z-2 origin-bottom">
             <div
               className="btn__content overflow-hidden relative text-black z-2 before:pointer-events-none before:absolute before:inset-0 before:border-[.7rem] before:z-3 before:border-current after:absolute after:inset-5 after:bg-pink-light after:z-1"
               style={{ height: "7.5rem" }}
             >
-              {/* todo  */}
-              <div
-                style={{ height: "7.5rem" }}
-                className="px-25 flex items-center font-main bg-pink-light"
-              >
-                Ecosystem
-              </div>
+              <div>11</div>
             </div>
-          </div>
-          <div>btn</div>
+          </div> */}
+          <button className="mtoggle btn inline-flex rounded-full relative h-spray-t">
+            {/* 可以产生位移的部分 */}
+            <div className="btn__content relative size-50 s:size-75 relative rounded-full overflow-hidden text-black z-2 before:absolute before:inset-0 before:border-[.4rem] s:before:border-[.7rem] before:rounded-full before:border-current before:z-2 after:absolute after:inset-3 after:bg-green after:rounded-full after:z-1">
+              <div></div>
+            </div>
+            {/* 斜着的img */}
+          </button>
         </div>
         {/* <nav className="flex items-center gap-x-20">
           <div>
@@ -361,7 +360,6 @@ export default function Home() {
               </div>
             </div>
           </section>
-
           {/*  */}
           <section className="relative bg-black text-white pt-70 s:pt-200 -mt-50 s:-mt-100">
             <div className="site-max --s text-center">
