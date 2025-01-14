@@ -7,7 +7,7 @@
 默认 --size:375 ； 为什么是
 大于 650，--size:1800,
 
-- 1. 添加一个 shadow
+- 1. 添加一个 shadow,使用::before,::after 来创建新的元素
 
 ```css
 .btn::after {
@@ -44,3 +44,12 @@
 `js-i-up`: 可能用于向上滑入动画
 `ScrollTrigger`:可能使用了滚动触发动画库
 `SplitText`:可能使用了文字分割动画库
+
+[react-spring](https://github.com/pmndrs/react-spring?tab=readme-ov-file)
+[]
+
+- 4. 动画组件库的选择
+  - GSAP，功能更强大但学习曲线更陡
+  - React Spring：基于弹簧物理的动画，API 相对复杂，不支持 SVG 动画
+  - React Motion 维护较少，API 较老，功能相对有限
+  - CSS Animations 功能有限，难以处理复杂的交互，状态管理困难
