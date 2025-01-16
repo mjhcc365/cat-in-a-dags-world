@@ -76,7 +76,7 @@
 ## 区分动画相关的单词
 
 `transforms` 变换
-`Translate` 位移
+`translate` 位移
 `trasition` 过渡的方式
 
 ```css
@@ -103,5 +103,28 @@
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+```
+
+## 自定义动画
+
+```css
+/* 这是一个 CSS 选择器，选择类名为 intro__bg 的元素，并且具有 data-v-16b4d893 属性的元素。 */
+
+/* infinite 无限次循环  */
+/* alternate 每次循环会反向播放，即在完成一次动画后，下依稀将从结束状态回到起始状态 */
+
+.intro__bg[data-v-16b4d893] {
+  animation: pan-16b4d893 10s infinite alternate;
+}
+
+@keyframes pan-16b4d893 {
+  0% {
+    transform: translate3d(5%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-5%, 0, 0);
+  }
 }
 ```
