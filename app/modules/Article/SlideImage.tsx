@@ -1,15 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import {
-  motion,
-  transform,
-  useScroll,
-  useSpring,
-  useTransform,
-} from "framer-motion";
+// import {
+//   motion,
+//   transform,
+//   useScroll,
+//   useSpring,
+//   useTransform,
+// } from "framer-motion";
 import { throttle } from "lodash"; // 导入 Lodash 的 throttle 函数
 
-import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
+// import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
 
 const imgs = [
   {
@@ -392,11 +392,9 @@ const BottomImages = () => {
 };
 
 const TopImages = () => {
-  // const { scrollXProgress } = useScroll({});
-  const domARef = useRef(null); // 引用 domA
-
+  const domARef = useRef(null);
   const [progress, setProgress] = useState(0);
-  // dom
+  let animationFrameId = useRef(0); // 用于存储动画帧 ID
 
   const handleScroll = () => {
     const { top, height } = domARef.current.getBoundingClientRect();
@@ -404,16 +402,21 @@ const TopImages = () => {
     const p = Math.min(Math.max(y / (height + window.innerHeight), 0), 1);
 
     setProgress(p);
-    console.log("--progress", p);
   };
 
-  const withT = throttle(handleScroll, 100);
+  const onScroll = () => {
+    if (animationFrameId.current) {
+      cancelAnimationFrame(animationFrameId.current); // 取消之前的动画帧
+    }
+    animationFrameId.current = requestAnimationFrame(handleScroll); // 请求新的动画帧
+  };
 
   useEffect(() => {
-    window.addEventListener("scroll", withT);
+    window.addEventListener("scroll", onScroll);
 
     return () => {
-      return window.removeEventListener("scroll", withT);
+      cancelAnimationFrame(animationFrameId.current); // 清理动画帧
+      window.removeEventListener("scroll", onScroll);
     };
   }, []);
 
