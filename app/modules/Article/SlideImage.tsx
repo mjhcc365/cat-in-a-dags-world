@@ -1,5 +1,12 @@
-import { useState, useEffect, useRef } from "react";
+import { useRef } from "react";
 import Image from "next/image";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useSpring,
+  useMotionValue,
+} from "framer-motion";
 const imgs = [
   {
     src: "/film-strip-border.svg",
@@ -381,69 +388,43 @@ const BottomImages = () => {
 };
 
 const TopImages = () => {
-  const domARef = useRef(null);
-  const [progress, setProgress] = useState(0);
-  let animationFrameId = useRef(0); // 用于存储动画帧 ID
+  const ref = useRef(null);
+  const x = useMotionValue(0); // 创建 motion value
 
-  const handleScroll = () => {
-    const { top, height } = domARef.current.getBoundingClientRect();
-    const y = window.innerHeight - top;
-    const p = Math.min(Math.max(y / (height + window.innerHeight), 0), 1);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end end"],
+  });
 
-    setProgress(p);
-  };
+  useMotionValueEvent(scrollYProgress, "change", (value) => {
+    x.set(value * 6512 * -1);
+  });
 
-  const onScroll = () => {
-    if (animationFrameId.current) {
-      cancelAnimationFrame(animationFrameId.current); // 取消之前的动画帧
-    }
-    animationFrameId.current = requestAnimationFrame(handleScroll); // 请求新的动画帧
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", onScroll);
-
-    return () => {
-      cancelAnimationFrame(animationFrameId.current); // 清理动画帧
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, []);
+  const sx = useSpring(x);
 
   return (
-    <div ref={domARef} className="relative z-2 rotate-[2.5deg]">
-      <div
-        className="parallax flex pl-[100vw]"
-        data-v-515835e5
-        style={{
-          "--x": "-6512px",
-          "--progress": `${progress}`,
-        }}
-      >
-        <div className="relative flex" data-v-515835e5>
+    <div className="relative z-2 rotate-[2.5deg]">
+      <div className="parallax flex pl-[100vw]">
+        <motion.div
+          style={{
+            x: sx,
+          }}
+          ref={ref}
+          className="relative flex"
+        >
           {imgs.map((ele, index) => {
             return (
               <div
-                // relative rounded-l-[1rem] s:rounded-l-[2rem] py-8 s:py-25 bg-black flex
                 className="relative py-8 s:py-25 pr-5 s:pr-25 bg-black"
                 key={index}
-                data-v-515835e5
               >
                 <figure className="media relative media-fill min-w-[25rem] s:min-w-[70rem] max-w-[25rem] s:max-w-[70rem] overflow-hidden radius-fix">
-                  <div
-                    className="pt-[65%]"
-                    data-v-4a377300=""
-                    data-v-515835e5=""
-                  ></div>
-                  <div
-                    className="absolute inset-0"
-                    // style="background-color:#c43892"
-                    data-v-4a377300=""
-                  ></div>
+                  <div className="pt-[65%]"></div>
+                  <div className="absolute inset-0" data-v-4a377300=""></div>
                   <Image
                     src={ele.src}
                     alt=""
                     className="media__image"
-                    data-v-4a377300
                     width={572}
                     height={372}
                   />
@@ -451,7 +432,7 @@ const TopImages = () => {
               </div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
@@ -460,6 +441,9 @@ const TopImages = () => {
 const SlideImage = () => {
   return (
     <div className="border overflow-hidden pb-35 s:pb-50 pt-35 s:pt-75">
+      <div className="border bg-white" style={{ height: 600 }}>
+        height 600px
+      </div>
       <TopImages />
       <CenterText />
       <BottomImages />
