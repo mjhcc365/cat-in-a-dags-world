@@ -1,16 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-// import {
-//   motion,
-//   transform,
-//   useScroll,
-//   useSpring,
-//   useTransform,
-// } from "framer-motion";
-import { throttle } from "lodash"; // 导入 Lodash 的 throttle 函数
-
-// import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
-
 const imgs = [
   {
     src: "/film-strip-border.svg",
@@ -471,13 +460,6 @@ const TopImages = () => {
 const SlideImage = () => {
   return (
     <div className="border overflow-hidden pb-35 s:pb-50 pt-35 s:pt-75">
-      <div
-        style={{
-          height: "600px",
-        }}
-      >
-        height
-      </div>
       <TopImages />
       <CenterText />
       <BottomImages />
