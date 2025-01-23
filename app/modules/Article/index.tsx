@@ -1,6 +1,6 @@
 import MarqueeText from "./MarqueeText";
 import SlideImage from "./SlideImage";
-
+// import { Textillate } from "textillate-react";
 const Article = () => {
   return (
     <article>

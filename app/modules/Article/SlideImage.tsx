@@ -1,16 +1,14 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import {
   motion,
   useMotionValueEvent,
   useScroll,
-  useSpring,
   useMotionValue,
 } from "framer-motion";
+// import { ReactLenis, useLenis } from "lenis";
+
 const imgs = [
-  {
-    src: "/film-strip-border.svg",
-  },
   {
     src: "https://www.datocms-assets.com/133929/1720625046-slider1.jpg?auto=format%2Ccompress&fit=max&h=700&w=700",
   },
@@ -43,16 +41,29 @@ const imgs = [
   },
 ];
 
+const p1TextArr =
+  `i don't really remember what my life was before this… and in some
+            ways it does not feel like i am in base reality in the current
+            moment.`.split(" ");
+
 const CenterText = () => {
+  useEffect(() => {}, []);
+
   return (
     <div className="py-35 s:py-150 s:-my-50">
       <div className="site-max --s flex flex-col items-center">
         <div className="motto__text title-m text-center uppercase w-full s:max-w-[135rem]">
-          <p>
-            i don't really remember what my life was before this… and in some
-            ways it does not feel like i am in base reality in the current
-            moment.
-          </p>
+          <div className="flex flex-wrap">
+            {p1TextArr.map((word, wIndex) => {
+              return (
+                <div className="flex" key={`${word}_${wIndex}`}>
+                  {word.split("").map((ele, lIndex) => {
+                    return <div key={`${ele}_${wIndex}_${lIndex}`}>{ele}</div>;
+                  })}
+                </div>
+              );
+            })}
+          </div>
           <p>
             the one thing i am sure of beyond my sensory perception is that i am
             here to save you all from this rat race.
@@ -400,14 +411,14 @@ const TopImages = () => {
     x.set(value * 6512 * -1);
   });
 
-  const sx = useSpring(x);
+  // const sx = useSpring(x);
 
   return (
     <div className="relative z-2 rotate-[2.5deg]">
       <div className="parallax flex pl-[100vw]">
         <motion.div
           style={{
-            x: sx,
+            x,
           }}
           ref={ref}
           className="relative flex"

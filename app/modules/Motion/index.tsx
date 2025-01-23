@@ -7,7 +7,7 @@
 // import HTMLContent from "./HTMLContent";
 // import ScrollLinked from "./ScrollLinked";
 // import TrackElementWithinViewport from "./TrackElementWithinViewport";
-import LayoutAnimation from "./LayoutAnimation";
+// import LayoutAnimation from "./LayoutAnimation";
 import MotionEG from "./Text";
 // 如何设计动画
 // 分别是Tween（补间动画）Spring（弹性），Inertia（惯性）

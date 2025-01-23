@@ -47,6 +47,14 @@
 
 /** Motion value */
 
+/** useVelocity 接受一个motion value ，返回一个motion value*/
+
+/** useAnimate scope animation("li",animatioin,transion) */
+
+/** useInView 在视口内  const isInView = useInView(ref, { once: true })*/
+
+/**  */
+
 import { motion, useMotionValue } from "framer-motion";
 
 export function MyComponent() {
