@@ -1,23 +1,17 @@
-import { ReactLenis } from "lenis/react";
-import type { LenisRef } from "lenis/react";
-import { useRef } from "react";
+import { ReactLenis, useLenis } from "lenis/react";
+import LearnGSAP from "./LearnGSAP";
+// import LenisAndGsap from "./LenisAndGsap";
+
+import dynamic from "next/dynamic";
+
+const LenisAndGsap = dynamic(() => import("./LenisAndGsap"), { ssr: false });
 
 function App() {
-  const lenisRef = useRef<LenisRef>(null);
+  return <LenisAndGsap />;
 
   return (
-    <ReactLenis root options={{ autoRaf: false }} ref={lenisRef}>
-      <div
-        style={{
-          height: "200vh",
-          background: "linear-gradient(to bottom, #ff7e5f, #feb47b)",
-        }}
-      >
-        <div style={{ padding: "50px", color: "white", textAlign: "center" }}>
-          <h1>Smooth Scrolling with Lenis</h1>
-          <p>Scroll down to see the effect!</p>
-        </div>
-      </div>
+    <ReactLenis root>
+      <div style={{ height: 1200 }}>content</div>
     </ReactLenis>
   );
 }
