@@ -1,12 +1,7 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import {
-  motion,
-  useMotionValueEvent,
-  useScroll,
-  useMotionValue,
-} from "framer-motion";
-// import { ReactLenis, useLenis } from "lenis";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const imgs = [
   {
@@ -399,30 +394,22 @@ const BottomImages = () => {
 };
 
 const TopImages = () => {
-  const ref = useRef(null);
-  const x = useMotionValue(0); // 创建 motion value
+  const slideRef = useRef(null);
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end end"],
-  });
-
-  useMotionValueEvent(scrollYProgress, "change", (value) => {
-    x.set(value * 6512 * -1);
-  });
-
-  // const sx = useSpring(x);
+  // 监听滚动事件
+  useGSAP(
+    () => {
+      gsap.to(slideRef.current, {
+        x: "-100",
+      });
+    },
+    { scope: slideRef }
+  );
 
   return (
     <div className="relative z-2 rotate-[2.5deg]">
       <div className="parallax flex pl-[100vw]">
-        <motion.div
-          style={{
-            x,
-          }}
-          ref={ref}
-          className="relative flex"
-        >
+        <div ref={slideRef} className="relative flex">
           {imgs.map((ele, index) => {
             return (
               <div
@@ -443,7 +430,7 @@ const TopImages = () => {
               </div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </div>
   );
