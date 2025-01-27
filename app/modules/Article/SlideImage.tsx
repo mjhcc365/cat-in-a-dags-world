@@ -396,11 +396,23 @@ const BottomImages = () => {
 const TopImages = () => {
   const slideRef = useRef(null);
 
-  // 监听滚动事件
   useGSAP(
     () => {
-      gsap.to(slideRef.current, {
-        x: "-100",
+      const setX = gsap.quickSetter(slideRef.current, "x", "px");
+
+      const domW =
+        (slideRef.current as any)?.getBoundingClientRect().width || 0;
+      gsap.timeline({
+        scrollTrigger: {
+          id: "111",
+          trigger: slideRef.current,
+          scrub: true,
+          start: "top bottom",
+          end: "bottom top",
+          onUpdate: (e) => {
+            setX(`-${e.progress * domW}`);
+          },
+        },
       });
     },
     { scope: slideRef }
