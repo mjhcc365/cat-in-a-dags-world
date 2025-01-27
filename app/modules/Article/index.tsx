@@ -1,6 +1,7 @@
 import MarqueeText from "@/app/components/MarqueeText";
 import SlideImage from "./SlideImage";
 import Mew from "./Mew";
+import Solana from "./Solana";
 const Article = () => {
   return (
     <article>
@@ -11,6 +12,11 @@ const Article = () => {
         <div className="bg-red">
           <Mew />
         </div>
+      </div>
+
+      {/*powered by solana*/}
+      <div className="relative overflow-hidden bg-red -mt-1 z-2">
+        <Solana />
       </div>
 
       <div className="motto relative bg-red after:absolute after:bottom-0 after:left-0 after:w-full after:bg-white after:h-200 after:z-1 z-3 is-active">

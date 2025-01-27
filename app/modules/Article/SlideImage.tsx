@@ -451,9 +451,6 @@ const TopImages = () => {
 const SlideImage = () => {
   return (
     <div className="border overflow-hidden pb-35 s:pb-50 pt-35 s:pt-75">
-      <div className="border bg-white" style={{ height: 600 }}>
-        height 600px
-      </div>
       <TopImages />
       <CenterText />
       <BottomImages />
