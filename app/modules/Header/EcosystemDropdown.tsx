@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 
 const EcosystemDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +41,7 @@ const EcosystemDropdown = () => {
               className="flex items-center justify-between p-15 border-b border-gray-200"
             >
               <span>{link.name}</span>
-              <img src={link.image} alt={link.name} className="h-25 w-auto" />
+              <Image src={link.image} alt={link.name} className="h-25 w-auto" />
             </a>
           ))}
         </div>

@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -30,7 +31,7 @@ const Solana = () => {
               className="media relative h-45 w-50 s:h-140 s:w-160 media-contain ml-30 s:ml-60"
               data-v-4a377300
             >
-              <img
+              <Image
                 src="https://mew.xyz/solana.svg"
                 alt=""
                 loading="lazy"
@@ -49,7 +50,7 @@ const Solana = () => {
               className="media relative h-45 w-50 s:h-140 s:w-160 media-contain ml-30 s:ml-60"
               data-v-4a377300
             >
-              <img
+              <Image
                 src="https://mew.xyz/solana.svg"
                 alt=""
                 loading="lazy"
@@ -68,7 +69,7 @@ const Solana = () => {
               className="media relative h-45 w-50 s:h-140 s:w-160 media-contain ml-30 s:ml-60"
               data-v-4a377300
             >
-              <img
+              <Image
                 src="https://mew.xyz/solana.svg"
                 alt=""
                 loading="lazy"

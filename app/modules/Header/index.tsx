@@ -1,6 +1,5 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import Logo from "./Logo";
-// import EcosystemDropdown from "./EcosystemDropdown";
 import Image from "next/image";
 import HSprayS from "../../source/h-spray-s.png";
 
@@ -29,7 +28,7 @@ const HeaderBackText = () => {
 
 /* logo dropdown green-btn */
 const HeaderButtons = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, _setIsMenuOpen] = useState(false);
 
   return (
     <div className="fixed top-0 left-0 w-full pointer-events-none z-7">

@@ -1,3 +1,4 @@
+import Image from "next/image";
 const Mew = () => {
   return (
     <>
@@ -9,7 +10,7 @@ const Mew = () => {
             data-v-4a377300
           >
             <div className="pt-[90%]" data-v-4a377300></div>
-            <img
+            <Image
               src="https://mew.xyz/shibatoni.png"
               alt=""
               loading="lazy"
@@ -44,9 +45,13 @@ const Mew = () => {
           className="flex items-center gap-x-10 text-left h-spray-t"
         >
           <figure className="relative js-i-up">
-            <img src="https://mew.xyz/arrow-dark.png" className="h-40 w-auto" />
+            <Image
+              src="https://mew.xyz/arrow-dark.png"
+              className="h-40 w-auto"
+              alt=""
+            />
             <div className="h-spray absolute -inset-x-10 inset-y-0 media-contain z-2">
-              <img src="/h-spray-s-light.png" />
+              <Image src="/h-spray-s-light.png" alt="" />
             </div>
           </figure>
           <span className="text-16 uppercase leading-none js-i-split">
@@ -74,7 +79,7 @@ const Mew = () => {
               ></path>
             </svg>
             <div className="h-spray absolute -inset-x-10 inset-y-0 media-contain z-2">
-              <img src="/h-spray-s-light.png" />
+              <Image src="/h-spray-s-light.png" alt="" />
             </div>
           </a>
           <a
@@ -95,7 +100,7 @@ const Mew = () => {
               ></path>
             </svg>
             <div className="h-spray absolute -inset-x-10 inset-y-0 media-contain z-2">
-              <img src="/h-spray-s-light.png" />
+              <Image src="/h-spray-s-light.png" alt="" />
             </div>
           </a>
           <a
@@ -116,7 +121,7 @@ const Mew = () => {
               ></path>
             </svg>
             <div className="h-spray absolute -inset-x-10 inset-y-0 media-contain z-2">
-              <img src="/h-spray-s-light.png" />
+              <Image src="/h-spray-s-light.png" alt="" />
             </div>
           </a>
         </div>

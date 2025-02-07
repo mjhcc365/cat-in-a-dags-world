@@ -1,7 +1,4 @@
-import { useEffect, useRef } from "react";
 import Image from "next/image";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 
 /** 新时代的开端 */
 const DawnOfNewEra = () => {
@@ -42,7 +39,7 @@ const DawnOfNewEra = () => {
               </div>
               <span className="relative z-3"></span>
               <div className="h-spray absolute inset-x-[7.5%] inset-y-0 media-fit z-3">
-                <img src="/h-spray-l.png" alt="" />
+                <Image src="/h-spray-l.png" alt="" />
               </div>
             </div>
           </a>
@@ -69,16 +66,16 @@ const DawnOfNewEra = () => {
               </div>
               <span className="relative z-3"></span>
               <div className="h-spray absolute inset-x-[7.5%] inset-y-0 media-fit z-3">
-                <img src="/h-spray-l.png" alt="" />
+                <Image src="/h-spray-l.png" alt="" />
               </div>
             </div>
           </a>
-          <img
+          <Image
             src="/paw.png"
             alt="Paw"
             className="relative s:absolute s:bottom-0 s:left-0 w-36 s:w-75 mt-5 s:mt-0 h-auto"
           />
-          <img
+          <Image
             src="/paw.png"
             alt="Paw"
             className="hidden s:block absolute bottom-0 right-0 w-75 h-auto"
@@ -118,7 +115,7 @@ const DawnOfNewEra = () => {
         <div className="relative w-150 s:w-300 -mt-10 s:mt-0">
           <figure className="relative overflow-hiden will-change-transform">
             <div className="pt-[100%]"></div>
-            <img
+            <Image
               src="/coin/image-1.png"
               alt=""
               className="absolute top-0 left-0 w-full h-full"
@@ -155,7 +152,7 @@ const DawnOfNewEra = () => {
             </div>
             <span className="relative z-3"></span>
             <div className="h-spray absolute inset-x-[7.5%] inset-y-0 media-fit z-3">
-              <img src="/h-spray-l.png" alt="" />
+              <Image src="/h-spray-l.png" alt="" />
             </div>
           </div>
         </a>
@@ -165,7 +162,7 @@ const DawnOfNewEra = () => {
           <div className="min-w-[25rem] s:min-w-[65rem] max-w-[25rem] s:max-w-[65rem] relative overflow-hidden radius-fix rounded-[1.15rem] s:rounded-[2rem]">
             <figure className="media relative media-fill" data-v-4a377300>
               <div className="pt-[70%]" data-v-4a377300></div>
-              <img
+              <Image
                 src="https://www.datocms-assets.com/133929/1723131960-moto-bike.jpg?auto=format%2Ccompress&fit=max&h=900&w=900"
                 alt=""
                 loading="lazy"
@@ -179,7 +176,7 @@ const DawnOfNewEra = () => {
           <div className="min-w-[25rem] s:min-w-[65rem] max-w-[25rem] s:max-w-[65rem] relative overflow-hidden radius-fix rounded-[1.15rem] s:rounded-[2rem]">
             <figure className="media relative media-fill" data-v-4a377300>
               <div className="pt-[70%]" data-v-4a377300></div>
-              <img
+              <Image
                 src="https://www.datocms-assets.com/133929/1723137712-6-faces.jpg?auto=format%2Ccompress&fit=max&h=900&w=900"
                 alt=""
                 loading="lazy"
@@ -193,7 +190,7 @@ const DawnOfNewEra = () => {
           <div className="min-w-[25rem] s:min-w-[65rem] max-w-[25rem] s:max-w-[65rem] relative overflow-hidden radius-fix rounded-[1.15rem] s:rounded-[2rem]">
             <figure className="media relative media-fill" data-v-4a377300>
               <div className="pt-[70%]" data-v-4a377300></div>
-              <img
+              <Image
                 src="https://www.datocms-assets.com/133929/1723138907-mew-wheel-2.jpg?auto=format%2Ccompress&fit=max&h=900&w=900"
                 alt=""
                 loading="lazy"
@@ -207,7 +204,7 @@ const DawnOfNewEra = () => {
           <div className="min-w-[25rem] s:min-w-[65rem] max-w-[25rem] s:max-w-[65rem] relative overflow-hidden radius-fix rounded-[1.15rem] s:rounded-[2rem]">
             <figure className="media relative media-fill" data-v-4a377300>
               <div className="pt-[70%]" data-v-4a377300></div>
-              <img
+              <Image
                 src="https://www.datocms-assets.com/133929/1723137965-many-faces.jpg?auto=format%2Ccompress&fit=max&h=900&w=900"
                 alt=""
                 loading="lazy"

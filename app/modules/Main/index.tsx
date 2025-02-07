@@ -26,7 +26,7 @@ function App() {
       lenis?.destroy();
       setLenis(null);
     };
-  }, [lenis]);
+  }, [lenis, setLenis]);
 
   return (
     <ReactLenis root>
