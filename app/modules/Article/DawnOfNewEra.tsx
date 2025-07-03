@@ -39,7 +39,7 @@ const DawnOfNewEra = () => {
               </div>
               <span className="relative z-3"></span>
               <div className="h-spray absolute inset-x-[7.5%] inset-y-0 media-fit z-3">
-                <Image src="/h-spray-l.png" alt="" />
+                <Image src="/h-spray-l.png" width={100} height={100} />
               </div>
             </div>
           </a>
@@ -66,7 +66,7 @@ const DawnOfNewEra = () => {
               </div>
               <span className="relative z-3"></span>
               <div className="h-spray absolute inset-x-[7.5%] inset-y-0 media-fit z-3">
-                <Image src="/h-spray-l.png" alt="" />
+                <Image src="/h-spray-l.png" width={100} height={100} />
               </div>
             </div>
           </a>
@@ -74,11 +74,15 @@ const DawnOfNewEra = () => {
             src="/paw.png"
             alt="Paw"
             className="relative s:absolute s:bottom-0 s:left-0 w-36 s:w-75 mt-5 s:mt-0 h-auto"
+            width={100}
+            height={100}
           />
           <Image
             src="/paw.png"
             alt="Paw"
             className="hidden s:block absolute bottom-0 right-0 w-75 h-auto"
+            width={100}
+            height={100}
           />
         </div>
       </div>
@@ -117,8 +121,9 @@ const DawnOfNewEra = () => {
             <div className="pt-[100%]"></div>
             <Image
               src="/coin/image-1.png"
-              alt=""
               className="absolute top-0 left-0 w-full h-full"
+              width={100}
+              height={100}
             />
             <canvas className="absolute top-0 left-0 w-full h-full z-2"></canvas>
           </figure>
@@ -152,7 +157,7 @@ const DawnOfNewEra = () => {
             </div>
             <span className="relative z-3"></span>
             <div className="h-spray absolute inset-x-[7.5%] inset-y-0 media-fit z-3">
-              <Image src="/h-spray-l.png" alt="" />
+              <Image src="/h-spray-l.png" width={100} height={100} />
             </div>
           </div>
         </a>
@@ -164,12 +169,13 @@ const DawnOfNewEra = () => {
               <div className="pt-[70%]" data-v-4a377300></div>
               <Image
                 src="https://www.datocms-assets.com/133929/1723131960-moto-bike.jpg?auto=format%2Ccompress&fit=max&h=900&w=900"
-                alt=""
                 loading="lazy"
                 decoding="async"
                 draggable="false"
                 className="media__image"
                 data-v-4a377300
+                width={100}
+                height={100}
               />
             </figure>
           </div>
@@ -178,12 +184,13 @@ const DawnOfNewEra = () => {
               <div className="pt-[70%]" data-v-4a377300></div>
               <Image
                 src="https://www.datocms-assets.com/133929/1723137712-6-faces.jpg?auto=format%2Ccompress&fit=max&h=900&w=900"
-                alt=""
                 loading="lazy"
                 decoding="async"
                 draggable="false"
                 className="media__image"
                 data-v-4a377300
+                width={100}
+                height={100}
               />
             </figure>
           </div>
@@ -192,12 +199,13 @@ const DawnOfNewEra = () => {
               <div className="pt-[70%]" data-v-4a377300></div>
               <Image
                 src="https://www.datocms-assets.com/133929/1723138907-mew-wheel-2.jpg?auto=format%2Ccompress&fit=max&h=900&w=900"
-                alt=""
                 loading="lazy"
                 decoding="async"
                 draggable="false"
                 className="media__image"
                 data-v-4a377300
+                width={100}
+                height={100}
               />
             </figure>
           </div>
@@ -206,12 +214,13 @@ const DawnOfNewEra = () => {
               <div className="pt-[70%]" data-v-4a377300></div>
               <Image
                 src="https://www.datocms-assets.com/133929/1723137965-many-faces.jpg?auto=format%2Ccompress&fit=max&h=900&w=900"
-                alt=""
                 loading="lazy"
                 decoding="async"
                 draggable="false"
                 className="media__image"
                 data-v-4a377300
+                width={100}
+                height={100}
               />
             </figure>
           </div>

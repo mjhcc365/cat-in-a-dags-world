@@ -12,12 +12,13 @@ const Mew = () => {
             <div className="pt-[90%]" data-v-4a377300></div>
             <Image
               src="https://mew.xyz/shibatoni.png"
-              alt=""
               loading="lazy"
               decoding="async"
               draggable="false"
               className="media__image"
               data-v-4a377300
+              width={100}
+              height={100}
             />
           </figure>
         </div>
@@ -48,10 +49,11 @@ const Mew = () => {
             <Image
               src="https://mew.xyz/arrow-dark.png"
               className="h-40 w-auto"
-              alt=""
+              width={100}
+              height={100}
             />
             <div className="h-spray absolute -inset-x-10 inset-y-0 media-contain z-2">
-              <Image src="/h-spray-s-light.png" alt="" />
+              <Image src="/h-spray-s-light.png" width={100} height={100} />
             </div>
           </figure>
           <span className="text-16 uppercase leading-none js-i-split">
@@ -79,7 +81,7 @@ const Mew = () => {
               ></path>
             </svg>
             <div className="h-spray absolute -inset-x-10 inset-y-0 media-contain z-2">
-              <Image src="/h-spray-s-light.png" alt="" />
+              <Image src="/h-spray-s-light.png" width={100} height={100} />
             </div>
           </a>
           <a
@@ -100,7 +102,7 @@ const Mew = () => {
               ></path>
             </svg>
             <div className="h-spray absolute -inset-x-10 inset-y-0 media-contain z-2">
-              <Image src="/h-spray-s-light.png" alt="" />
+              <Image src="/h-spray-s-light.png" width={100} height={100} />
             </div>
           </a>
           <a
@@ -121,7 +123,7 @@ const Mew = () => {
               ></path>
             </svg>
             <div className="h-spray absolute -inset-x-10 inset-y-0 media-contain z-2">
-              <Image src="/h-spray-s-light.png" alt="" />
+              <Image src="/h-spray-s-light.png" width={100} height={100} />
             </div>
           </a>
         </div>

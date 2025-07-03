@@ -68,7 +68,7 @@ const HeaderButtons = () => {
               )}
               {!isMenuOpen && (
                 <div className="h-spray absolute -inset-x-5 inset-y-0 media-contain z-3">
-                  <Image src={HSprayS} alt="" width={69} height={61} />
+                  <Image src={HSprayS} width={69} height={61} />
                 </div>
               )}
             </div>

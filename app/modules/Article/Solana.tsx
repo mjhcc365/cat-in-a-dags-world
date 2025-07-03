@@ -33,12 +33,13 @@ const Solana = () => {
             >
               <Image
                 src="https://mew.xyz/solana.svg"
-                alt=""
                 loading="lazy"
                 decoding="async"
                 draggable="false"
                 className="media__image"
                 data-v-4a377300
+                width={100}
+                height={100}
               />
             </figure>
           </div>
@@ -52,12 +53,13 @@ const Solana = () => {
             >
               <Image
                 src="https://mew.xyz/solana.svg"
-                alt=""
                 loading="lazy"
                 decoding="async"
                 draggable="false"
                 className="media__image"
                 data-v-4a377300
+                width={100}
+                height={100}
               />
             </figure>
           </div>
@@ -71,12 +73,13 @@ const Solana = () => {
             >
               <Image
                 src="https://mew.xyz/solana.svg"
-                alt=""
                 loading="lazy"
                 decoding="async"
                 draggable="false"
                 className="media__image"
                 data-v-4a377300
+                width={100}
+                height={100}
               />
             </figure>
           </div>

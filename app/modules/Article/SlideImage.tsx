@@ -157,7 +157,6 @@ const BottomImages = () => {
                   <div className="absolute inset-0"></div>
                   <Image
                     src={ele.src}
-                    alt=""
                     className="media__image"
                     width={572}
                     height={372}
@@ -212,7 +211,6 @@ const TopImages = () => {
                   <div className="absolute inset-0" data-v-4a377300=""></div>
                   <Image
                     src={ele.src}
-                    alt=""
                     className="media__image"
                     width={572}
                     height={372}
